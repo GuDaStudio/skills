@@ -49,6 +49,9 @@ cd skills
 
 提供安装脚本，支持灵活选择安装范围和目标位置。
 
+<details open>
+<summary><b>Linux / macOS</b></summary>
+
 **查看可用 Skills：**
 
 ```bash
@@ -81,18 +84,57 @@ cd skills
 ./install.sh --target /your/custom/path --all
 ```
 
+</details>
+
+<details open>
+<summary><b>Windows (PowerShell)</b></summary>
+
+**查看可用 Skills：**
+
+```powershell
+.\install.ps1 -List
+```
+
+**方式一：一键安装所有 Skills**
+
+```powershell
+# 用户级安装（所有项目生效）
+.\install.ps1 -User -All
+
+# 项目级安装（仅当前项目生效，需在项目根目录执行）
+.\install.ps1 -Project -All
+```
+
+**方式二：选择性安装**
+
+```powershell
+# 仅安装 collaborating-with-codex
+.\install.ps1 -User -Skill collaborating-with-codex
+
+# 安装多个指定 Skill
+.\install.ps1 -User -Skill collaborating-with-codex -Skill collaborating-with-gemini
+```
+
+**方式三：自定义安装路径**
+
+```powershell
+.\install.ps1 -Target C:\your\custom\path -All
+```
+
+</details>
+
 <details>
 <summary>点击查看完整参数说明</summary>
 
-| 参数 | 简写 | 说明 |
-|------|------|------|
-| `--user` | `-u` | 安装到用户级目录 (`~/.claude/skills/`) |
-| `--project` | `-p` | 安装到项目级目录 (`./.claude/skills/`) |
-| `--target <path>` | `-t` | 安装到自定义路径 |
-| `--all` | `-a` | 安装所有可用 Skills |
-| `--skill <name>` | `-s` | 安装指定 Skill（可多次使用） |
-| `--list` | `-l` | 列出所有可用 Skills |
-| `--help` | `-h` | 显示帮助信息 |
+| 参数 (Bash) | 参数 (PowerShell) | 简写 | 说明 |
+|-------------|-------------------|------|------|
+| `--user` | `-User` | `-u` | 安装到用户级目录 (`~/.claude/skills/`) |
+| `--project` | `-Project` | `-p` | 安装到项目级目录 (`./.claude/skills/`) |
+| `--target <path>` | `-Target <path>` | `-t` | 安装到自定义路径 |
+| `--all` | `-All` | `-a` | 安装所有可用 Skills |
+| `--skill <name>` | `-Skill <name>` | `-s` | 安装指定 Skill（可多次使用） |
+| `--list` | `-List` | `-l` | 列出所有可用 Skills |
+| `--help` | `-Help` | `-h` | 显示帮助信息 |
 
 </details>
 

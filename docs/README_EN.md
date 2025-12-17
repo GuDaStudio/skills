@@ -49,6 +49,9 @@ cd skills
 
 The install script provides flexible options for scope and target location.
 
+<details open>
+<summary><b>Linux / macOS</b></summary>
+
 **List available Skills:**
 
 ```bash
@@ -81,18 +84,57 @@ The install script provides flexible options for scope and target location.
 ./install.sh --target /your/custom/path --all
 ```
 
+</details>
+
+<details open>
+<summary><b>Windows (PowerShell)</b></summary>
+
+**List available Skills:**
+
+```powershell
+.\install.ps1 -List
+```
+
+**Option 1: Install All Skills**
+
+```powershell
+# User-level installation (available for all projects)
+.\install.ps1 -User -All
+
+# Project-level installation (current project only, run from project root)
+.\install.ps1 -Project -All
+```
+
+**Option 2: Selective Installation**
+
+```powershell
+# Install only collaborating-with-codex
+.\install.ps1 -User -Skill collaborating-with-codex
+
+# Install multiple specific Skills
+.\install.ps1 -User -Skill collaborating-with-codex -Skill collaborating-with-gemini
+```
+
+**Option 3: Custom Installation Path**
+
+```powershell
+.\install.ps1 -Target C:\your\custom\path -All
+```
+
+</details>
+
 <details>
 <summary>Click to view full parameter reference</summary>
 
-| Parameter | Short | Description |
-|-----------|-------|-------------|
-| `--user` | `-u` | Install to user-level directory (`~/.claude/skills/`) |
-| `--project` | `-p` | Install to project-level directory (`./.claude/skills/`) |
-| `--target <path>` | `-t` | Install to custom path |
-| `--all` | `-a` | Install all available Skills |
-| `--skill <name>` | `-s` | Install specific Skill (can be used multiple times) |
-| `--list` | `-l` | List all available Skills |
-| `--help` | `-h` | Show help message |
+| Parameter (Bash) | Parameter (PowerShell) | Short | Description |
+|------------------|------------------------|-------|-------------|
+| `--user` | `-User` | `-u` | Install to user-level directory (`~/.claude/skills/`) |
+| `--project` | `-Project` | `-p` | Install to project-level directory (`./.claude/skills/`) |
+| `--target <path>` | `-Target <path>` | `-t` | Install to custom path |
+| `--all` | `-All` | `-a` | Install all available Skills |
+| `--skill <name>` | `-Skill <name>` | `-s` | Install specific Skill (can be used multiple times) |
+| `--list` | `-List` | `-l` | List all available Skills |
+| `--help` | `-Help` | `-h` | Show help message |
 
 </details>
 
