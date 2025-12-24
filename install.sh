@@ -84,7 +84,7 @@ install_skill() {
     if [ -f "$dest_dir/.git" ]; then
         rm "$dest_dir/.git"
     fi
-
+    find "$dest_dir" -type f -name "*.py" -exec chmod +x {} \;
     echo -e "${GREEN}  ✓ Installed${NC}"
 }
 
