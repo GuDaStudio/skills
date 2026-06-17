@@ -12,7 +12,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 # Available skills
-AVAILABLE_SKILLS=("collaborating-with-codex" "collaborating-with-gemini")
+AVAILABLE_SKILLS=("collaborating-with-codex" "collaborating-with-gemini" "local-tts")
 
 # Script directory
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

@@ -13,7 +13,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$AvailableSkills = @("collaborating-with-codex", "collaborating-with-gemini")
+$AvailableSkills = @("collaborating-with-codex", "collaborating-with-gemini", "local-tts")
 
 function Write-ColorOutput {
     param([string]$Text, [string]$Color = "White")
