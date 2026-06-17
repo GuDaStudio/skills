@@ -25,6 +25,7 @@
 |-------|----------|----------|
 | [collaborating-with-codex](https://github.com/GuDaStudio/collaborating-with-codex) | 将编码任务委托给 Codex CLI，用于原型开发、调试和代码审查 | OpenAI Codex |
 | [collaborating-with-gemini](https://github.com/GuDaStudio/collaborating-with-gemini) | 将编码任务委托给 Gemini CLI，用于原型开发、调试和代码审查 | Google Gemini |
+| [local-tts](./local-tts) | 本地生成并检查 OmniVoice/VoxCPM 语音，交付前验证响度、静音和 ASR 可识别性 | Local GPU / TTS |
 
 </details>
 
@@ -88,7 +89,7 @@ cd skills
 ./install.sh --user --skill collaborating-with-codex
 
 # 安装多个指定 Skill
-./install.sh --user -s collaborating-with-codex -s collaborating-with-gemini
+./install.sh --user -s collaborating-with-codex -s collaborating-with-gemini -s local-tts
 ```
 
 **方式三：自定义安装路径**

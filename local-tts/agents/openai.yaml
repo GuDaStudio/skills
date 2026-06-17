@@ -1,0 +1,4 @@
+interface:
+  display_name: "Local TTS"
+  short_description: "Generate and verify local TTS audio"
+  default_prompt: "Use $local-tts to generate checked local narration, convert it to a compatible MP3, and verify speech quality before delivery."

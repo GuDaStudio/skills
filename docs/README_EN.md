@@ -24,6 +24,7 @@ Star us on GitHub — your support means a lot! 🙏😊
 |-------|-------------|---------------------|
 | [collaborating-with-codex](../collaborating-with-codex) | Delegates coding tasks to Codex CLI for prototyping, debugging, and code review | OpenAI Codex |
 | [collaborating-with-gemini](../collaborating-with-gemini) | Delegates coding tasks to Gemini CLI for prototyping, debugging, and code review | Google Gemini |
+| [local-tts](../local-tts) | Generates and verifies local OmniVoice/VoxCPM speech, including loudness, silence, and ASR checks before delivery | Local GPU / TTS |
 
 ---
 
@@ -75,7 +76,7 @@ The install script provides flexible options for scope and target location.
 ./install.sh --user --skill collaborating-with-codex
 
 # Install multiple specific Skills
-./install.sh --user -s collaborating-with-codex -s collaborating-with-gemini
+./install.sh --user -s collaborating-with-codex -s collaborating-with-gemini -s local-tts
 ```
 
 **Option 3: Custom Installation Path**
